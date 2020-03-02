@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './CSS/App.css';
-import {Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // noinspection SpellCheckingInspection
 import Navbar from "./Navbar";
-import App from './SwitchPageTest';
+import test from "./SwitchPageTest"
 import Main from "./App"
 
-const SwitchPageTest = () => (
-    <main>
-        <Navbar />
-        <Switch>
-            <Route path="/" Component={App} exact />
-            <Route path="/Main" Component={Main} />
-        </Switch>
-    </main>
-);
-
+class SwitchPageTest extends Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <div>
+                    Working
+                    <Navbar />
+                    <Switch>
+                        <Route path="/SwitchPageTest" component={test} exact/>
+                        <Route path="/" component={Main} exact/>
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
+    }
+}
 
 
 export default SwitchPageTest;

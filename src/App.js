@@ -1,9 +1,29 @@
 import React, {Component} from 'react';
 import './CSS/App.css';
 import DataTable from './DataTable';
-import Logo from "./JS/download.jpg"
+import Logo from "./JS/download.jpg";
+import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
+import Navbar from "./Navbar";
+import Test from "./SwitchPageTest";
+import Main from "./App"
 
 let rowsString = [[""],[""],[""],[""],[""],[""],[""]];
+
+class SwitchPage extends Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <div>
+                    <Navbar />
+                    <Switch>
+                        <Route path="/SwitchPageTest" component={Test} exact/>
+                        <Route path="/" component={Main} exact/>
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
+    }
+}
 
 class TableSet extends Component{
 
@@ -40,7 +60,7 @@ class LTab extends Component{
     render() {
         const browse = <label id={"Browse"} htmlFor={"myFile"}>Browse<br/></label>
         const validation = <button type="summit" id="btnValidate" >Validate Files</button>
-        const logout = <button>Logoff</button>
+        const logout = <Link to="/Main">Logoff</Link>
         return (
             <div id={"TabButtons"}>
                 <form>
@@ -80,7 +100,7 @@ function App() {
 
   return (
     <div>
-        <input id="myFile" type="file" onChange={handleChange} hidden={false} multiple />
+        <input id="myFile" type="file" onChange={handleChange} hidden={true} multiple />
         <Body />
     </div>
   );
