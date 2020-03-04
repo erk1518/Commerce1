@@ -2,28 +2,29 @@ import React, {Component} from 'react';
 import './CSS/App.css';
 import DataTable from './DataTable';
 import Logo from "./JS/download.jpg";
-import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
-import Navbar from "./Navbar";
-import Test from "./SwitchPageTest";
-import Main from "./App"
+import  {Link} from "react-router-dom";
+// import {BrowserRouter, Route, Switch} from "react-router-dom";
+//import Navbar from "./Navbar";
+//import Test from "./SwitchPageTest";
+//import Main from "./App"
 
 let rowsString = [[""],[""],[""],[""],[""],[""],[""]];
 
-class SwitchPage extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <div>
-                    <Navbar />
-                    <Switch>
-                        <Route path="/SwitchPageTest" component={Test} exact/>
-                        <Route path="/" component={Main} exact/>
-                    </Switch>
-                </div>
-            </BrowserRouter>
-        );
-    }
-}
+// class SwitchPage extends Component {
+//     render() {
+//         return (
+//             <BrowserRouter>
+//                 <div>
+//                     {/*<Navbar />*/}
+//                     <Switch>
+//                         <Route path="/" component={Main} exact/>
+//                         <Route path="/Test" component={Test} exact/>
+//                     </Switch>
+//                 </div>
+//             </BrowserRouter>
+//         );
+//     }
+// }
 
 class TableSet extends Component{
 
@@ -58,12 +59,14 @@ class Header extends Component{
 //https://stackoverflow.com/questions/49649767/reactjs-how-do-you-switch-between-pages-in-react
 class LTab extends Component{
     render() {
+
         const browse = <label id={"Browse"} htmlFor={"myFile"}>Browse<br/></label>
         const validation = <button type="summit" id="btnValidate" >Validate Files</button>
-        const logout = <Link to="/Main">Logoff</Link>
+        const logout = <Link to="/Test">Logoff</Link>
         return (
             <div id={"TabButtons"}>
-                <form>
+                {/*action= is were the file(s) are going */}
+                <form action={"./"} method={"POST"}>
                     <br/>{browse}<br/><br/>{validation}
                 </form>
                     <br/>{logout}
@@ -100,19 +103,10 @@ function App() {
 
   return (
     <div>
-        <input id="myFile" type="file" onChange={handleChange} hidden={true} multiple />
+        <input id="myFile" type="file" onChange={handleChange} hidden={false} multiple />
         <Body />
     </div>
   );
-}
-
-//Trying to get the table to update with the selected files
-function UpdateTable() {
-
-    this.setState((state) => {
-        // Important: read `state` instead of `this.state` when updating.
-        return {}
-    });
 }
 
 function handleChange(event) {

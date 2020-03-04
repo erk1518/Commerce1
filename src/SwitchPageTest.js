@@ -11,7 +11,7 @@ class SwitchPageTest extends Component {
         return (
             <BrowserRouter>
                 <div>
-                    Working
+                    Working... <br/>is It?
                     <Navbar />
                     <Switch>
                         <Route path="/SwitchPageTest" component={test} exact/>
