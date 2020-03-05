@@ -1,367 +1,110 @@
 import React, {Component} from 'react';
-import DataTable from './DataTable';
 import './CSS/App.css';
+import DataTable from './DataTable';
+import Logo from "./JS/download.jpg";
+import  {Link} from "react-router-dom";
+// import {BrowserRouter, Route, Switch} from "react-router-dom";
+//import Navbar from "./Navbar";
+//import Test from "./SwitchPageTest";
+//import Main from "./App"
 
-class Body extends Component {
+let rowsString = [[""],[""],[""],[""],[""],[""],[""]];
+
+// class SwitchPage extends Component {
+//     render() {
+//         return (
+//             <BrowserRouter>
+//                 <div>
+//                     {/*<Navbar />*/}
+//                     <Switch>
+//                         <Route path="/" component={Main} exact/>
+//                         <Route path="/Test" component={Test} exact/>
+//                     </Switch>
+//                 </div>
+//             </BrowserRouter>
+//         );
+//     }
+// }
+
+class TableSet extends Component{
+
     render() {
+
+        const heading =[["ID"],["File Name"],["Sending Company"],["Receiving Company"],["Date"],["Time"],["Found Error"]]
+        let rows =[rowsString]
         return (
-            <p>
-                <input id="myFile" type="file" onChange={handleChange} hidden={true} multiple={false} />
-                <table id="tblButtons">
-                    <th><label id="btnBrowse" htmlFor="myFile" >Browse</label></th>
-                    <th><button type="button" id="btnCancel" onClick="clearLoadedFile()">Cancel</button></th>
-                    <th><button type="button" id="btnValidate" onClick="validate()">Validate File</button></th>
-                </table>
-            </p>
+            <div >
+                <DataTable headings = {heading} rows={rows}/>
+            </div>
         );
     }
 }
 
 class Header extends Component{
     render() {
-        const heading =[[""],[""]];
-        const rows = [
-            [1,"7777525252525252525252525252525252525252525252525252525252525252525252525252525252525252525984"],
-            [2,"5252525984525252598452525259845252525984525252598452525259845252525984525252598452525259846668"],
-            [3,"5252525984525252598452525259845252525984525252598452525259845252525984525252598452525259846668"],
-            [4,"5252525984525252598452525259845252525984525252598452525259845252525984525252598452525259846668"],
-            [5,"5252525984525252598452525259845252525984525252598452525259845252525984525252598452525259846668"],
-            [6,"5252525984525252598452525259845252525984525252598452525259845252525984525252598452525259846668"]
-        ];
+        const userName = "User"
+
         return (
-            <p>
-                <div align = "center">
-                           <DataTable headings = {heading}rows={rows}/>
+            <div id={"BodyHeader"}>
+                <div id={"CompanyLogo"}>
+                    <img src={Logo} alt={"Website Logo"} hidden={true}/>
                 </div>
-            </p>
+                <div id={"GreetingUser"}>
+                    <label id={"UserLabel"}>Welcome, {userName}</label>
+                </div>
+            </div>
         );
     }
 }
+//https://stackoverflow.com/questions/49649767/reactjs-how-do-you-switch-between-pages-in-react
+class LTab extends Component{
+    render() {
 
-class Report extends Component{
-    render(){
-        const Error =
-            <p>ERROR one word red, large, and needs to be centered</p>;
-        const ErrorReason =
-            <p>The reason for the error goes here autosize based on the size of this field with a minimum size need to be worked in and red color</p>;
-
+        const browse = <label id={"Browse"} htmlFor={"myFile"}>Browse<br/></label>
+        const validation = <button type="summit" id="btnValidate" >Validate Files</button>
+        const logout = <Link to="/Test">Logoff</Link>
         return (
-            <div align={"center"}>
-                <div id={"Header"}>
-                    <p id={"Text"}>Messages</p>
-                </div>
-                <div>
-                    <div id={"ErrorReport"}>
-                        <div id = "isError">
-                            {Error}
-                        </div>
-                        <div id = "whatError">
-                            {ErrorReason}
-                        </div>
-                    </div>
-                </div>
-                <div id={"Header"}>
-                    <p id={"Text"}>Company Specification / File Details</p>
-                </div>
-                <div>
-                    <div id={"ErrorDetails"}>
-                        <table id = {"ErrorLayout"}>
-                            <tr>
-                                <td colSpan={3}>
-                                    <div id={"FileHeaders"}>
-                                        <b>File Header Record(1)</b>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Immediate<br/>Destination</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    101000019
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Immediate<br/>Origin</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    741258964
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Immediate<br/>Origin Name</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    The Fab Four Corp
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
+            <div id={"TabButtons"}>
+                {/*action= is were the file(s) are going */}
+                <form action={"./"} method={"POST"}>
+                    <br/>{browse}<br/><br/>{validation}
+                </form>
+                    <br/>{logout}
+            </div>
+        );
 
-                            <tr>
-                                <td colSpan={3}>
-                                    <div id={"FileHeaders"}>
-                                        <b>Batch Header Record (5)</b>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Company<br/>Name</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    STRAWBERRYFIELDS
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Company<br/>ID</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    741258964
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Effective<br/>Date</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    10/31/2019
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan={3}>
-                                    <div id={"FileHeaders"}>
-                                        <b>BATCH CONTROL RECORD (8)</b>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Entry/Addenda<br/>Count</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    18
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Entry Hash</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    0181800018
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>TTL Debit Entry<br/>$-Amount</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    $0.00
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>TTL Credit<br/>Entry $-Amount</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    $0.00
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Company<br/>ID</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    741258964
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan={3}>
-                                    <div id={"FileHeaders"}>
-                                        <b>FILE CONTROL RECORD (9)</b>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Entry/Addenda<br/>Count</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    18
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>Entry Hash</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    0181800018
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>TTL Debit Entry<br/>$-Amount</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    $0.00
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table id={"InnerTable"}>
-                                        <tr>
-                                            <td>
-                                                <div id={"SubHeaders"}>
-                                                    <b>TTL Credit Entry<br/>$-Amount</b>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id={"FileData"}>
-                                                    $0.83
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
+    }
+}
+
+class Body extends Component {
+    render() {
+        return (
+            <div>
+                <div >
+                    <Header/>
+                </div>
+                <div>
+                    <div id={"MainBody"}>
+                        <div id={"LeftSidedTab"}>
+                            <LTab/>
+                        </div>
+                        <div id={"RightSideTable"}>
+                            <br/><br/>
+                            <TableSet/>
+                        </div>
                     </div>
                 </div>
             </div>
-
         );
     }
 }
 
 function App() {
+
   return (
     <div>
-        <Header />
+        <input id="myFile" type="file" onChange={handleChange} hidden={false} multiple />
         <Body />
-        <Report />
     </div>
   );
 }
@@ -373,9 +116,24 @@ function handleChange(event) {
     }
     else
     {
+        const fileList = event.target.files; /* now you can work with the file list */
+        rowsString = ""
 
+        for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
+            let file = fileList[i];
+            let id = i+1
+            let fileName = file.name
+            let company = "Rosebud;!;!;!;!"
+            let sendTo = "Bank"
+            let date = new Date().toLocaleDateString()
+            let time = new Date().toLocaleTimeString()
+            let error = "No Error Found"
+            rowsString = [[id],[fileName],[company],[sendTo],[date],[time],[error]]
+        }
+        //uncomment line below to see error
+        //UpdateTable()
+        //look up React States: https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
     }
 }
-
 
 export default App;

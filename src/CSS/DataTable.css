@@ -7,8 +7,8 @@
 .Cell {
     border: 0px solid #ffffff;
     padding-top: 0px;
-    padding-right: 10px;
+    padding-right: 30px;
     text-align: left;
-    font: bold 11px Arial;
+    font:  25px "Times New Roman";
 }
 

@@ -1,88 +1,96 @@
-  #btnBrowse{
-      font: bold 11px Arial;
-      text-decoration: none;
-      background-color: #EEEEEE;
-      color: #333333;
-      padding: 2px 6px 2px 6px;
-      border-top: 1px solid #CCCCCC;
-      border-right: 1px solid #333333;
-      border-bottom: 1px solid #333333;
-      border-left: 1px solid #CCCCCC;
-  }
+#LeftSidedTab{
+    width: 200px;
+    height: 1000px;
+    float: left;
+    background: rgb(73, 69, 69);
+}
 
-  #tblButtons{
-      border-collapse: collapse;
-      align-content: center;
-      width: 100%;
-  }
+#RightSideTable{
+    min-height: 100%;
+    width: 100%;
+    height: 1000px;
+    background: rgb(73, 69, 69) ;
+}
 
-  #Header{
-      background: black;
-  }
+#MainBody{
+    width: 100%;
+    height: 100%;
+}
 
-  #Text{
-      color: white;
-  }
+#BodyHeader{
+    width: 100%;
+    height: 80px;
+    background: hsla(125, 85%, 49%, 0.774);
+}
 
-  #MessageDetails{
+#CompanyLogo{
+    width: 50%
+}
 
-  }
+#GreetingUser{
+    margin-left: 85%;
+}
 
-  #ErrorReport{
-      width:75%;
-      min-height: 100px;
-  }
+#TabButtons{
+    width: 80%;
+    margin: 15px auto;
+    padding-left: 20px;
+}
 
-  #isError {
-      font: bold 11px Arial;
-      float:left;
-      background:WHITE;
-      width:25%;
-      height:50px;
-  }
+#UserLabel{
+    display: inline-block;
+    background-color: hsla(125, 85%, 49%, 0.0);
+    color: white;
+    width: 125px;
+    height: 30px;
+    padding-top: 50px;
+    text-align: end;
+    font: icon;
+    font-weight: bold;
+    border-radius: 15px 50px;
+}
 
-  #whatError{
-      font: bold 11px Arial;
-      float:right;
-      background:WHITE;
-      width:75%;
-      height:50px;
-      max-width: 75%;
-      word-wrap: break-word;
-  }
 
-  #FileHeaders{
-      border-style: solid;
-      max-width: 32%;
-  }
+#Browse
+{
+    display: inline-block;
+    background-color: hsla(125, 85%, 49%, 0.774);
+    font-style: normal;
+    color: white;
+    border: none;
+    width: 125px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    font: icon;
+    font-weight: bold;
+    border-radius: 15px 50px;
+    outline-width: 0;
+    cursor: pointer;
+}
 
-  #ImmDest{
-      border-style: solid;
-      width: 175px;
-      float:left;
-  }
 
-  #ErrorLayout{
-      width: 75%;
-      text-align: right;
+button
+{
+    display: inline-block;
+    background-color: hsla(125, 85%, 49%, 0.774);
+    font-style: normal;
+    color: white;
+    border: none;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    font: icon;
+    font-weight: bold;
+    border-radius: 15px 50px;
+    outline-width: 0;
+    cursor: pointer;
+}
 
-  }
 
-  #SubHeaders{
-      border-style: solid;
-      height: 50px;
-  }
 
-  #FileData{
-      border-style: groove;
-      margin: 1px;
-      height: 50px;
-      line-height: 45px;
-  }
 
-  #InnerTable{
-      width: 100%;
-  }
+
 
 
 
