@@ -1,0 +1,95 @@
+.App
+{
+  text-align: center;
+}
+
+.App-header 
+{
+  background-color: hsla(125, 85%, 49%, 0.774);
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: calc(15px + 3vmin);
+  color: gray;
+}
+
+body
+{
+  background-color: rgb(73, 69, 69) ;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  height: 100%;
+  color: white;
+}
+
+/* textfield properites for username and password */
+input
+{
+  width: 200px;
+  height: 25px;
+  border-radius: 15px;
+  border: none;
+}
+
+/* all a:xxxx deals with the link and it's properties */
+a:link
+{
+  font-size: medium;
+}
+
+a:visited
+{
+  color: white;
+}
+
+a:hover
+{
+  color: hsla(125, 85%, 49%, 0.774);
+}
+
+a:active
+{
+  color:hsla(125, 85%, 49%, 0.774);
+}
+
+button
+{
+  background-color: hsla(125, 85%, 49%, 0.774);
+  font-style: normal;
+  color: white;
+  border: none;
+  /* padding-right: 10%; */
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  font: icon;
+  font-weight: bold;
+  border-radius: 15px 50px;
+}
+
+
+label
+{
+  color: aliceblue;
+}
+
+/*  
+.App-link 
+{
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}*/
