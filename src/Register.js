@@ -1,6 +1,16 @@
 import React from 'react';
 import './App.css';
 
+class Register extends React.Component
+{
+  render()
+  {
+    return <h1>Register</h1>
+  }
+}
+
+export default Register
+
 function Register() {
     return (
       <div className="App">
@@ -17,35 +27,35 @@ function Register() {
             <br></br><br></br><br></br>
             <label>Name</label>
             <br></br>
-            <input type = "text" id = "name"></input>
+            <input type = "text" id = "name" required></input>
             <br></br><br></br>
 
             <label>Username</label>
             <br></br>
-            <input type = "text" id = "createUserName"></input>
+            <input type = "text" id = "createUserName" required></input>
             <br></br><br></br>
 
             <label>Email Address</label>
             <br></br>
-            <input type = "text" id = "createEmail"></input>
+            <input type = "text" id = "createEmail" required></input>
             <br></br><br></br>
 
             <label>Password</label>
             <br></br>
-            <input type = "text" id = "createPassword"></input>
+            <input type = "password" id = "createPassword" required></input>
             <br></br><br></br>
 
             <label>Confirm Password</label>
             <br></br>
-            <input type = "text" id = "createConfirmPassword"></input>
+            <input type = "password" id = "createConfirmPassword" required></input>
             <br></br><br></br>
 
             <button variant = "btnSignUP">Sign Up</button>
             <br></br><br></br>
             
             
-             <a href = "https://www.google.com">Sign in</a> 
-            {/* <a href = "src\Register.js">Create Account</a> */}
+             <a href = "/App.js">Sign in</a> 
+            {/* <a href = "/App.js">Create Account</a> */}
           </form>
       </body>
       </div>

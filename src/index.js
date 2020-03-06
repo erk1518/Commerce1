@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route, Switch } from "react-router-dom";
+
 import './index.css';
+
  import App from './App';
-//   import App from './Register';
+ import Register from './Register';
 
 import * as serviceWorker from './serviceWorker';
 
