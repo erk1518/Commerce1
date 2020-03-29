@@ -1,31 +1,34 @@
 import React from 'react';
+import '../CSS/Style.css';
 import './Register';
-import "./Validation"
+import './Validation';
+import './ErrorDetails';
 import{ Link } from "react-router-dom";
 
-class Login extends React.Component
+function Login ()
  {
-
-     render() {
          return (
-             <div className="App">
+             <div className="Login">
 
                  {/* Displays the header */}
                  <header className="App-header">
                      {
-                         <label id="lblLogin">Sign In</label>
+                         <div>
+                             <label id="lblLogin">Sign In <br/>&nbsp;</label>
+                         </div>
                      }
                  </header>
 
                  <body className="Body">
                  {/* ctrl + / for comments*/}
-                 {/* form used for username and password */}
-                 <form action={"/Validation"} method={"POST"} >
+                 {/* form used for username and password method changed to GET for testing we will need to change it back to POST*/}
+
+                 <form action={"/Validation"} method={"GET"} >
                      {/* Username input field */}
                      <br></br><br></br><br></br>
                      <label>Username</label>
                      <br></br>
-                     <input type="text" id="userName" required></input>
+                     <input type="text" name="userName"id="userName" value="Joshua"required></input>
                      <br></br><br></br>
 
                      {/* Password input field */}
@@ -36,7 +39,7 @@ class Login extends React.Component
                      <br></br><br></br>
 
                      {/* login button */}
-                     <button type={"submit"} variant="btnLogin"><Link to={"/Validation"}>Login</Link></button>
+                     <button type={"submit"} variant="btnLogin">Login</button>
                      <br></br><br></br>
 
                      <Link to={"/Register"}>Create Account</Link>
@@ -45,7 +48,6 @@ class Login extends React.Component
                  </body>
              </div>
          );
-     }
 }
 
 export default Login;

@@ -1,12 +1,9 @@
 import React from 'react';
-import './CSS/App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Validation from "./components/Validation";
+import ErrorDetails from "./components/ErrorDetails";
 import Login from "./components/Login"
 import Register from "./components/Register";
-
-
-
 
 function App() {
   return (
@@ -17,6 +14,7 @@ function App() {
                     <Route path="/" component={Login} exact/>
                     <Route path="/Login" component={Login}/>
                     <Route path="/Validation" component={Validation}/>
+                    <Route path="/ErrorDetails" component={ErrorDetails}/>
                     <Route path="/Register" component={Register}/>
                 </Switch>
             </div>

@@ -1,16 +1,15 @@
 import React from 'react';
-import '../CSS/Register.css';
+import '../CSS/Style.css';
 import './Login';
 import{ Link } from "react-router-dom";
 
-class Register extends React.Component{
-
-    render() {
+function Register()
+{
       return (
-          <div className="App">
+          <div className="Register">
             <header className="App-header">
               {
-                <label id="lblRegister">Create Account</label>
+                <label id="lblRegister">Create Account<br/>&nbsp;</label>
               }
             </header>
 
@@ -53,7 +52,6 @@ class Register extends React.Component{
             </body>
           </div>
       );
-    }
   }
   
   export default Register;

@@ -1,11 +1,23 @@
-.App
+.Login
 {
   text-align: center;
+}
+
+.Register
+{
+  text-align: center;
+}
+
+.Validation
+{
+  text-align: center;
+  min-width: 750px;
 }
 
 .App-header 
 {
   background-color: hsla(125, 85%, 49%, 0.774);
+  width: 100%;
   min-height: 2vh;
   display: flex;
   flex-direction: column;
@@ -14,6 +26,67 @@
   padding: 20px;
   font-size: calc(15px + 3vmin);
   color: gray;
+}
+
+.Validation-header
+{
+  background-color: hsla(125, 85%, 49%, 0.774);
+  width: 100%;
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  font-size: calc(15px + 3vmin);
+}
+
+.GreetLabel
+{
+  width: 280px;
+  float: right;
+}
+
+.Picture
+{
+  background: white;
+  max-height: 100px;
+  width: 200px;
+  float: left;
+  padding: 20px;
+}
+.ValidationTable
+{
+  width: 100%;
+  display: table;
+}
+
+.ValidationBodyHolder
+{
+  display: table-row;
+}
+
+.ButtonHolder
+{
+  /*background: white;*/
+  width: 12.5%;
+  display: table-cell;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: calc(0px + 5vmin);
+}
+
+.TableHolder
+{
+  display: table-cell;
+  width: 85%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: calc(0px + 5vmin);
 }
 
 body
@@ -72,24 +145,8 @@ button
   border-radius: 15px 50px;
 }
 
-
 label
 {
   color: aliceblue;
 }
 
-/*  
-.App-link 
-{
-  color: #61dafb;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}*/
