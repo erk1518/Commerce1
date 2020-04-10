@@ -2,6 +2,7 @@ import React from 'react';
 import '../CSS/Style.css';
 import './Login';
 import StickyHeadTable from "./StickyHeadTable";
+import ErrorDetails from "./ErrorDetails";
 
 //Works only for GET method
 const queryString = window.location.search;
@@ -32,12 +33,12 @@ class Validation extends React.Component{
                 {/* form used to submit file */}
                 {
                  <div className="ValidationTable">
-                     <div className="ValidationBodyHolder">
+                     {/*<div className="ValidationBodyHolder">*/}
                          <div >
                              <StickyHeadTable/>
                          </div>
                      </div>
-                 </div>
+                 // </div>
                 }
                 </body>
           </div>

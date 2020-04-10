@@ -23,12 +23,12 @@ function Login ()
                  {/* ctrl + / for comments*/}
                  {/* form used for username and password method changed to GET for testing we will need to change it back to POST*/}
 
-                 <form action={"/Validation"} method={"GET"} >
+                 <form action={"/ErrorDetails"} method={"GET"} >
                      {/* Username input field */}
                      <br></br><br></br><br></br>
                      <label>Username</label>
                      <br></br>
-                     <input type="text" name="userName"id="userName" value="Joshua"required></input>
+                     <input type="text" name="userName"id="userName" required></input>
                      <br></br><br></br>
 
                      {/* Password input field */}

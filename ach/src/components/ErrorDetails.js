@@ -1,7 +1,12 @@
 import React from 'react';
 import '../CSS/Style.css';
 import './Login';
-import TableRenderingExample from "./TableRenderingExample";
+import ErrorTableHeaderRecord from "./ErrorTableHeaderRecord";
+import ErrorTableBatchRecord from "./ErrorTableBatchRecord";
+import ErrorTableEntryData from "./ErrorTableEntryData";
+import ErrorTableAddendaRecord from "./ErrorTableAddendaRecord";
+import ErrorTableBatchControl from "./ErrorTableBatchControl";
+import ErrorTableHeaderControl from "./ErrorTableHeaderControl";
 
 //Works only for GET method
 const queryString = window.location.search;
@@ -34,7 +39,12 @@ class ErrorDetails extends React.Component{
                     <div className="ErrorTable">
                         <div className="ErrorBodyHolder">
                             <div >
-                                <TableRenderingExample/>
+                                <ErrorTableHeaderRecord/>
+                                <ErrorTableBatchRecord/>
+                                <ErrorTableEntryData/>
+                                <ErrorTableAddendaRecord/>
+                                <ErrorTableBatchControl/>
+                                <ErrorTableHeaderControl/>
                             </div>
                         </div>
                     </div>
