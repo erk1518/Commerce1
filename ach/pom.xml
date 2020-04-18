@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.commerce</groupId>
+	<artifactId>ach</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ach</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- artifactIDs listing:
+			spring-boot-starter-web
+			spring-boot-devtools
+			spring-boot-starter-test
+			camel-spring-boot-dependencies
+			camel-spring-boot-starter
+			camel-core
+			camel-jms
+			//camel-cxf
+			//activemq-client
+			camel-jackson
+			camel-jaxb
+			//jackson-core
+			camel-file-watch-starter
+			camel-file-starter
+			camel-stream
+			//tika-parsers
+		-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://camel.apache.org/camel-spring-boot/latest/index.html  -->
+		<!-- Camel BOM -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-spring-boot-dependencies</artifactId>
+			<version>3.1.0</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+
+		<!-- https://camel.apache.org/camel-spring-boot/latest/index.html  -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-spring-boot-starter</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<!-- https://www.javainuse.com/camel/apache_camel_rest_jaxrs -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.19</version>
+		</dependency>
+
+		<!-- https://www.javainuse.com/camel/camel-marshal-unmarshal-example  -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jms</artifactId>
+			<version>3.1.0</version>   <!-- 2.14.1 -->
+		</dependency>
+
+		<!-- https://www.javainuse.com/camel/apache_camel_rest_jaxrs
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		-->
+
+		<!-- https://www.javainuse.com/camel/camel-marshal-unmarshal-example
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<version>5.10.1</version>
+		</dependency>
+		 -->
+		<!-- https://www.javainuse.com/camel/camel-marshal-unmarshal-example  -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+			<version>3.1.0</version>   <!-- 2.14.1 -->
+		</dependency>
+		<!-- https://www.javainuse.com/camel/camel-marshal-unmarshal-example  -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+			<version>3.1.0</version>   <!-- 2.13.0 -->
+		</dependency>
+
+		<!-- http://preparationforinterview.com/preparationforinterview/camel-object-to-json-springdsl
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+	     -->
+
+        <!-- https://camel.apache.org/components/latest/file-watch-component.html -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-file-watch-starter</artifactId>
+			<version>3.1.0</version> <!-- use the same version as your Camel core version -->
+		</dependency>
+
+		<!-- https://camel.apache.org/components/latest/file-component.html  -->
+		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-file-starter</artifactId>
+			<version>3.1.0</version> <!-- use the same version as your Camel core version -->
+
+		</dependency>
+
+		<!--  https://fabian-kostadinov.github.io/2016/01/10/reading-from-and-writing-to-files-in-apache-camel/  -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-stream</artifactId>
+			<version>2.16.1</version>
+		</dependency>
+
+		<!--
+		<dependency>
+    		<groupId>org.apache.tika</groupId>
+    		<artifactId>tika-parsers</artifactId>
+    		<version>1.24</version>
+		</dependency>
+		-->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- https://www.javainuse.com/camel/apache_camel_rest_jaxrs -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<version>2.4.0</version>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.6</version>
+				<configuration>
+					<workingDirectory>frontend</workingDirectory>
+					<installDirectory>target</installDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v12.16.2</nodeVersion>
+							<npmVersion>6.14.4</npmVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<configuration>
+							<target>
+								<copy todir="C:/Users/grega/SrProjFinal/ach/target/classes/public">
+									<fileset dir="C:/Users/grega/SrProjFinal/ach/frontend/build"/>
+								</copy>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+		</plugins>
+	</build>
+
+</project>
