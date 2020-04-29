@@ -36,4 +36,5 @@ build/
 
 ### Local node modules ###
 node_modules
+upload-dir
 

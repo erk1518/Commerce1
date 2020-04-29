@@ -96,9 +96,9 @@ export default function StickyHeadTable() {
             </div>
             <Paper className="TableHolder">
                 {/*action=will send the data to address*/}
-                <form method={"GET"}>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
                     {/*Hide these two when not testing*/}
-                    <input id="myFile" type="file" onChange={handlePageUpdate} hidden={false} multiple />
+                    <input id="myFile" name="files" type="file" onChange={handlePageUpdate} hidden={false} multiple />
                     <button id="btnSubmit" type={"submit"} hidden={false}>Submit</button>
                 </form>
                 <TableContainer className={classes.container}>

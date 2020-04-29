@@ -101064,6 +101064,10 @@ function createData(name, size) {
 
 function filesToValidate(event) {
   //if Empty
+  console.log("and here!"); //console.log(event.target);
+  //console.log(this);
+  //console.log(this.files);
+
   if (!event.target.files[0]) {
     return;
   } else {
@@ -101072,6 +101076,7 @@ function filesToValidate(event) {
 
     for (var i = 0, numFiles = fileList.length; i < numFiles; i++) {
       var file = fileList[i];
+      console.log(file.name);
       rows.push(createData(file.name, file.size));
     } //This cause auto submit
     //document.getElementById("btnSubmit").click();
@@ -101138,9 +101143,12 @@ function StickyHeadTable() {
   }, "Select"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", null, "Logoff")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "TableHolder"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
-    method: "GET"
+    action: "/upload",
+    method: "POST",
+    enctype: "multipart/form-data"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
     id: "myFile",
+    name: "files",
     type: "file",
     onChange: handlePageUpdate,
     hidden: false,
