@@ -1,26 +1,17 @@
 package com.commerce.ach;
 
 public class FailedLine {
-
-	protected String line;
-	protected int lineNum;
-	protected String errorMessage;
-	protected boolean errorBools[];
 	
-	public FailedLine(String currentLine, int lineNum) {
+	String flLine;
+	String flErrorDescription;
+	int flLineNumber;
 	
-		this.line = currentLine;
-		this.lineNum = lineNum;
-				
+	protected FailedLine (String currentLine, String errorDescription, int lineNum) {
+		
+		this.flLine = currentLine;
+		this.flErrorDescription = errorDescription;
+		this.flLineNumber = lineNum;
+		
 	}
 	
-	protected void setErrors(boolean[] errorBools) {
-		this.errorBools = errorBools;
-	}
-	
-	protected void setErrorMessage(String errorMessage) {
-		this.errorMessage = "Line "+String.format("% 4d", lineNum)+": "+errorMessage;
-	}
-	
-
 }

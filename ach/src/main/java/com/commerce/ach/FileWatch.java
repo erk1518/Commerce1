@@ -10,30 +10,30 @@ public abstract class FileWatch extends RouteBuilder {
 
     public static void run() throws Exception {
         System.out.println("FileWatch started");
-        watchUIFolder();
+//        watchUIFolder();
         watchReaderFolder();
     }
 
-    public static void watchUIFolder() throws Exception {
-        //System.out.println("FileWatch started - UIFolder");
-        CamelContext cc1 = new DefaultCamelContext();
-        cc1.addRoutes(new FileWatch() {
-            @Override
-            public void configure() {
-                //System.out.println("FileWatch configure() started");
-                from("file-watch:C://Users/grega/SrProj/uiFolder" +
-                        "?events=CREATE,DELETE,MODIFY")     // .log these events at occurrence
-                        .log("File event: ${header.CamelFileEventType}"
-                                + " occurred on file ${header.CamelFileName}"
-                                + " at " + getTimeStamp());
-            }
-        });
-        try{
-            System.out.println("FileWatch running - UIFolder");
-            cc1.start();
-        }
-        catch (Exception e) { e.printStackTrace(); }
-    }
+//    public static void watchUIFolder() throws Exception {
+//        //System.out.println("FileWatch started - UIFolder");
+//        CamelContext cc1 = new DefaultCamelContext();
+//        cc1.addRoutes(new FileWatch() {
+//            @Override
+//            public void configure() {
+//                //System.out.println("FileWatch configure() started");
+//                from("file-watch:upload-dir" +
+//                        "?events=CREATE,DELETE,MODIFY")     // .log these events at occurrence
+//                        .log("File event: ${header.CamelFileEventType}"
+//                                + " occurred on file ${header.CamelFileName}"
+//                                + " at " + getTimeStamp());
+//            }
+//        });
+//        try{
+//            System.out.println("FileWatch running - UIFolder");
+//            cc1.start();
+//        }
+//        catch (Exception e) { e.printStackTrace(); }
+//    }
 
     public static void watchReaderFolder() throws Exception {
         //System.out.println("FileWatch started - ReaderFolder");
@@ -42,7 +42,7 @@ public abstract class FileWatch extends RouteBuilder {
             @Override
             public void configure() {
                 //System.out.println("FileWatch configure() started");
-                from("file-watch:C://Users/grega/SrProj/readFolder" +
+                from("file-watch: upload-dir" +
                         "?events=CREATE,DELETE,MODIFY")                       // .log these events at occurrence
                         .log("File event: ${header.CamelFileEventType}"
                                 + " occurred on file ${header.CamelFileName}"

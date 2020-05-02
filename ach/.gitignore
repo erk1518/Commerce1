@@ -29,3 +29,12 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### OS Files ###
+.DS_Store
+.DS_Store?
+
+### Local node modules ###
+node_modules
+upload-dir
+

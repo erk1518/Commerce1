@@ -9,8 +9,8 @@ public class TEXTtoPOJO implements Processor {
     public void process(Exchange exchange) throws Exception {
         System.out.println("TEXTtoPOJO process started");
         File newFile = exchange.getIn().getBody(File.class);
-        ACH3 ach = new ACH3(newFile);
-        exchange.getIn().setBody(ach, ACH3.class);
+        ACH4 ach = new ACH4(newFile);
+        exchange.getIn().setBody(ach, ACH4.class);
         System.out.print(ach.toString());
 
 //        send ACH object to back-end validation
