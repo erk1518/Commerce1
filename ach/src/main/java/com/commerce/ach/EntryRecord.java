@@ -59,18 +59,5 @@ public class EntryRecord {
     public String getAddendaRecordInd() { return er10AddendaRecordInd; }
     public String getTraceNum() { return er11TraceNum; }
 
-    /*
-    public void setTransactionCode(String line) { er2TransactionCode = line; }
-    public void setRecordTypeCode(String line) { er1RecordTypeCode = line; }
-    public void setRoutingNumReceivingInst(String line) { er3RoutingNumReceivingInst = line; }
-    public void setRoutingNumCheckDigit(String line) { er4RoutingNumCheckDigit = line; }
-    public void setReceivingInstAcctNum(String line) { er5ReceivingInstAcctNum = line; }
-    public void setDollarAmount(String line) { er6DollarAmount = line; }
-    public void setReceiverIDNum(String line) { er7ReceiverIDNum = line; }
-    public void setReceiverName(String line) { er8ReceiverName = line; }
-    public void setDiscretionaryData(String line) { er9DiscretionaryData = line; }
-    public void setAddendaRecordInd(String line) { er10AddendaRecordInd = line; }
-    public void setTraceNum(String line) { er11TraceNum = line; }
-    */
 
 }

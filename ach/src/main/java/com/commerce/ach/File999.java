@@ -21,13 +21,6 @@ public class File999 {
 	public boolean getError() {
 		return error;
 	}
-
-//	public void setContents(String contents) {
-//		this.contents = contents;
-//	}
-//	public void setLineNumber(int lineNumber) {
-//		this.lineNumber = lineNumber;
-//	}
 	
 	
 }

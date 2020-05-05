@@ -1,29 +1,45 @@
 .Login
 {
   text-align: center;
+  font-family: sans-serif;
 }
 
 .Register
 {
   text-align: center;
+  font-family: sans-serif;
 }
 
 .Validation
 {
   text-align: center;
   min-width: 750px;
+  font-family: sans-serif;
 }
 
 .App-header
 {
+  /*background-color: hsla(125, 85%, 49%, 0.774);*/
+  /*width: 100%;*/
+  /*min-height: 2vh;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*padding: 20px;*/
+  /*font-size: calc(15px + 3vmin);*/
+  /*!*color: gray;*!*/
+
   background-color: hsla(125, 85%, 49%, 0.774);
-  width: 100%;
-  min-height: 2vh;
+  /*min-height: 2vh;*/
+
+  padding: 10px;
+  margin: auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   font-size: calc(15px + 3vmin);
   color: gray;
 }
@@ -37,7 +53,6 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-
   font-size: calc(15px + 3vmin);
 }
 
@@ -47,14 +62,14 @@
   float: right;
 }
 
-.Picture
-{
-  background: white;
-  max-height: 100px;
-  width: 200px;
-  float: left;
-  padding: 20px;
-}
+/*.Picture*/
+/*{*/
+/* background: white;*/
+/* max-height: 100px;*/
+/* width: 200px;*/
+/* float: left;*/
+/* padding: 20px;*/
+/*}*/
 .ValidationTable
 {
   width: 100%;
@@ -107,12 +122,15 @@ input
   height: 25px;
   border-radius: 15px;
   border: none;
+  text-align: center;
+  outline-width: 0;
 }
 
 /* all a:xxxx deals with the link and it's properties */
 a:link
 {
   font-size: medium;
+  color: white;
 }
 
 a:visited
@@ -132,6 +150,18 @@ a:active
 
 button
 {
+  /*background-color: hsla(125, 85%, 49%, 0.774);*/
+  /*font-style: normal;*/
+  /*color: white;*/
+  /*border: none;*/
+  /*!* padding-right: 10%; *!*/
+  /*width: 150px;*/
+  /*height: 30px;*/
+  /*text-align: center;*/
+  /*font: icon;*/
+  /*font-weight: bold;*/
+  /*border-radius: 15px 50px;*/
+
   background-color: hsla(125, 85%, 49%, 0.774);
   font-style: normal;
   color: white;
@@ -143,9 +173,16 @@ button
   font: icon;
   font-weight: bold;
   border-radius: 15px 50px;
+  outline-width: 0;
+  cursor: pointer;
 }
 
 label
 {
   color: aliceblue;
+}
+
+#tableHeader
+{
+  color: black;
 }

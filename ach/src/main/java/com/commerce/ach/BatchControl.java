@@ -96,6 +96,5 @@ public class BatchControl {
 	public Integer getTotalCreditAmount() {
 		return Integer.valueOf(totalCreditAmount);
 	}
-
 	
 }

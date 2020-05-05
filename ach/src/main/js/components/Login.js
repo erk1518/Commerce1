@@ -14,7 +14,7 @@ function Login ()
                  <header className="App-header">
                      {
                          <div>
-                             <label id="lblLogin">Sign In <br/>&nbsp;</label>
+                             <label id="lblLogin">Sign In<br/>&nbsp;</label>
                          </div>
                      }
                  </header>
@@ -36,7 +36,7 @@ function Login ()
                      <br></br>
                      <input type="password" id="password" required autoComplete="off"></input>
 
-                     <br></br><br></br>
+                     <br></br><br></br><br></br>
 
                      {/* login button */}
                      <button type={"submit"} variant="btnLogin">Login</button>

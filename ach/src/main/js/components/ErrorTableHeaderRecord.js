@@ -10,8 +10,20 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 const columns = [
-    { id: 'name', label: 'File\u00a0Name', minWidth: 20 },
-    { id: 'size', label: 'File\u00a0Size', minWidth: 20, align: 'right',},
+    { id: 'isError', label: '', minWidth: 5 },
+    { id: 'recordType', label: 'Record Type', minWidth: 5 },
+    { id: 'priority', label: 'Priority\u00a0Code', minWidth: 5, align: 'right',},
+    { id: 'immediateDest', label: 'Immediate\u00a0Dest', minWidth: 15, align: 'right',},
+    { id: 'immediateOrigin', label: 'Immediate\u00a0Origin', minWidth: 15, align: 'right',},
+    { id: 'date', label: 'File\u00a0Creation Date', minWidth: 10, align: 'right',},
+    { id: 'time', label: 'File\u00a0Creation Time', minWidth: 10, align: 'right',},
+    { id: 'modifier', label: 'File ID\u00a0Modifier', minWidth: 5, align: 'right',},
+    { id: 'size', label: 'Record\u00a0Size', minWidth: 5, align: 'right',},
+    { id: 'blocking', label: 'Blocking\u00a0Factor', minWidth: 5, align: 'right',},
+    { id: 'format', label: 'Format\u00a0Code', minWidth: 5, align: 'right',},
+    { id: 'immediateDestName', label: 'Immediate\u00a0Dest Name', minWidth: 25, align: 'right',},
+    { id: 'immediateOriginName', label: 'Immediate\u00a0Origin Name', minWidth: 25, align: 'right',},
+    { id: 'reference', label: 'Reference\u00a0Code', minWidth: 10, align: 'right',},
     // {
     //     id: 'population',
     //     label: 'Population',
@@ -46,10 +58,6 @@ function filesToValidate(event) {
 
 function selectFiles() {
     document.getElementById("myFile").click();
-}
-
-function submitFiles() {
-    document.getElementById("btnSubmit").click();
 }
 
 const rows = [];
@@ -94,19 +102,11 @@ export default function StickyHeadTable() {
     return (
         <div>
             <br/>
-            <div className="ButtonHolder">
-                <button onClick={selectFiles}>Select</button>
-                <button onClick={submitFiles}>Submit</button>
-            </div>
             <Paper className="TableHolder">
                 {/*action=will send the data to address*/}
-                <form action="/upload" method="POST" enctype="multipart/form-data">
-                    {/*Hide these two when not testing*/}
-                    {/*multiple*/}
-                    <input id="myFile" name="files" type="file" onChange={handlePageUpdate} hidden={true}  />
-                    <button id="btnSubmit" type={"submit"} hidden={true}>Submit</button>
-                </form>
+                <label id={"tableHeader"}>Header Record</label>
                 <TableContainer className={classes.container}>
+
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow>
@@ -139,15 +139,15 @@ export default function StickyHeadTable() {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <TablePagination
-                    rowsPerPageOptions={[10, 25, 100]}
-                    component="div"
-                    count={rows.length}
-                    rowsPerPage={rowsPerPage}
-                    page={page}
-                    onChangePage={handleChangePage}
-                    onChangeRowsPerPage={handleChangeRowsPerPage}
-                />
+                {/*<TablePagination*/}
+                {/*    rowsPerPageOptions={[10, 25, 100]}*/}
+                {/*    component="div"*/}
+                {/*    count={rows.length}*/}
+                {/*    rowsPerPage={rowsPerPage}*/}
+                {/*    page={page}*/}
+                {/*    onChangePage={handleChangePage}*/}
+                {/*    onChangeRowsPerPage={handleChangeRowsPerPage}*/}
+                {/*/>*/}
             </Paper>
         </div>
     );

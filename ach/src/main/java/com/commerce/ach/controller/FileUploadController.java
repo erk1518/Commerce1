@@ -30,7 +30,7 @@ public class FileUploadController {
             storageService.store(file);
             System.out.println("You successfully uploaded " + file.getOriginalFilename() + "!");
         }
-        return "redirect:/";
+        return "redirect:/ErrorDetails";
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)

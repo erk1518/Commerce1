@@ -1,12 +1,12 @@
 import React from 'react';
 import '../CSS/Style.css';
 import './Login';
-import TableRenderingExample from "./TableRenderingExample";
-
-//Works only for GET method
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const name = urlParams.get('userName');
+import ErrorTableHeaderRecord from "./ErrorTableHeaderRecord";
+import ErrorTableBatchRecord from "./ErrorTableBatchRecord";
+import ErrorTableEntryData from "./ErrorTableEntryData";
+import ErrorTableAddendaRecord from "./ErrorTableAddendaRecord";
+import ErrorTableBatchControl from "./ErrorTableBatchControl";
+import ErrorTableHeaderControl from "./ErrorTableHeaderControl";
 
 class ErrorDetails extends React.Component{
 
@@ -17,11 +17,11 @@ class ErrorDetails extends React.Component{
                 <header className="Validation-header">
                     {
                         <div>
-                            <div className="Picture">
-                                <label id="lblLogo">Company Logo</label>
-                            </div>
+                            {/*<div className="Picture">*/}
+                            {/*    /!*<label id="lblLogo">Company Logo</label>*!/*/}
+                            {/*</div>*/}
                             <div className="GreetLabel">
-                                <label id="lblValidation">Welcome,<br/> {name}</label>
+                                <label id="lblValidation">Welcome,<br/> Joshua</label>
                             </div>
                         </div>
                     }
@@ -34,7 +34,12 @@ class ErrorDetails extends React.Component{
                     <div className="ErrorTable">
                         <div className="ErrorBodyHolder">
                             <div >
-                                <TableRenderingExample/>
+                                <ErrorTableHeaderRecord/>
+                                <ErrorTableBatchRecord/>
+                                <ErrorTableEntryData/>
+                                <ErrorTableAddendaRecord/>
+                                <ErrorTableBatchControl/>
+                                <ErrorTableHeaderControl/>
                             </div>
                         </div>
                     </div>
@@ -46,3 +51,4 @@ class ErrorDetails extends React.Component{
 }
 
 export default ErrorDetails;
+

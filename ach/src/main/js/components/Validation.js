@@ -4,9 +4,9 @@ import './Login';
 import StickyHeadTable from "./StickyHeadTable";
 
 //Works only for GET method
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const name = urlParams.get('userName');
+// const queryString = window.location.search;
+// const urlParams = new URLSearchParams(queryString);
+// const name = urlParams.get('userName');
 
 class Validation extends React.Component{
 
@@ -17,11 +17,11 @@ class Validation extends React.Component{
                 <header className="Validation-header">
                   {
                       <div>
-                          <div className="Picture">
-                              <label id="lblLogo">Company Logo</label>
-                          </div>
+                          {/*<div className="Picture">*/}
+                          {/*    /!*<label id="lblLogo">Company Logo</label>*!/*/}
+                          {/*</div>*/}
                           <div className="GreetLabel">
-                              <label id="lblValidation">Welcome,<br/> {name}</label>
+                              <label id="lblValidation">Welcome,<br/> Joshua</label>
                           </div>
                       </div>
                   }

@@ -10,8 +10,19 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 const columns = [
-    { id: 'name', label: 'File\u00a0Name', minWidth: 20 },
-    { id: 'size', label: 'File\u00a0Size', minWidth: 20, align: 'right',},
+    { id: 'isError', label: '', minWidth: 5 },
+    { id: 'recordType', label: 'Record Type', minWidth: 5 },
+    { id: 'serviceCode', label: 'Service\u00a0Code', minWidth: 5, align: 'right',},
+    { id: 'entryCount', label: 'Entry\u00a0Count', minWidth: 10, align: 'right',},
+    { id: 'entryHash', label: 'Entry\u00a0Hash', minWidth: 15, align: 'right',},
+    { id: 'totalDebitEntry', label: 'Total\u00a0Debit Entry', minWidth: 15, align: 'right',},
+    { id: 'totalCreditEntry', label: 'Total\u00a0Credit Entry', minWidth: 15, align: 'right',},
+    { id: 'companyID', label: 'Company\u00a0Identification', minWidth: 15, align: 'right',},
+    { id: 'messageAuthCode', label: 'Message\u00a0Auth Code', minWidth: 20, align: 'right',},
+    { id: 'reserved', label: 'Reserved', minWidth: 10, align: 'right',},
+    { id: 'dfiid', label: 'Originating\u00a0DFIID', minWidth: 10, align: 'right',},
+    { id: 'batchNumber', label: 'Batch\u00a0Number', minWidth: 10, align: 'right',},
+
     // {
     //     id: 'population',
     //     label: 'Population',
@@ -90,17 +101,10 @@ export default function StickyHeadTable() {
     return (
         <div>
             <br/>
-            <div className="ButtonHolder">
-                <button onClick={selectFiles}>Select</button>
-                <button>Logoff</button>
-            </div>
+
             <Paper className="TableHolder">
                 {/*action=will send the data to address*/}
-                <form method={"GET"}>
-                    {/*Hide these two when not testing*/}
-                    <input id="myFile" type="file" onChange={handlePageUpdate} hidden={false} multiple />
-                    <button id="btnSubmit" type={"submit"} hidden={false}>Submit</button>
-                </form>
+                <label id={"tableHeader"}>Here</label>
                 <TableContainer className={classes.container}>
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>

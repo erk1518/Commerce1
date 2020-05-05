@@ -157,8 +157,8 @@ public class Batch {
 	public String getBh13BatchNum() {
 		return bh13BatchNum;
 	}
-	
-	
+
+
 	public int getBhLineNumber() {
 		return bhLineNumber;
 	}
@@ -204,95 +204,5 @@ public class Batch {
 	public boolean[] getBcErrors() {
 		return bcErrors;
 	}
-
-
-	
-//	public void setBh1RecordTypeCode(char bh1RecordTypeCode) {
-//		this.bh1RecordTypeCode = bh1RecordTypeCode;
-//	}
-//	public void setBh2ServiceClassCode(String bh2ServiceClassCode) {
-//		this.bh2ServiceClassCode = bh2ServiceClassCode;
-//	}
-//	public void setBh3CompanyName(String bh3CompanyName) {
-//		this.bh3CompanyName = bh3CompanyName;
-//	}
-//	public void setBh4CompanyDiscrData(String bh4CompanyDiscrData) {
-//		this.bh4CompanyDiscrData = bh4CompanyDiscrData;
-//	}
-//	public void setBh5CompanyIdentification(String bh5CompanyIdentification) {
-//		this.bh5CompanyIdentification = bh5CompanyIdentification;
-//	}
-//	public void setBh6StandardEntryClassCode(String bh6StandardEntryClassCode) {
-//		this.bh6StandardEntryClassCode = bh6StandardEntryClassCode;
-//	}
-//	public void setBh7CompanyEntryDescr(String bh7CompanyEntryDescr) {
-//		this.bh7CompanyEntryDescr = bh7CompanyEntryDescr;
-//	}
-//	public void setBh8CompanyDescrDate(String bh8CompanyDescrDate) {
-//		this.bh8CompanyDescrDate = bh8CompanyDescrDate;
-//	}
-//	public void setBh9EffectiveEntryDate(String bh9EffectiveEntryDate) {
-//		this.bh9EffectiveEntryDate = bh9EffectiveEntryDate;
-//	}
-//	public void setBh10SettlementDate(String bh10SettlementDate) {
-//		this.bh10SettlementDate = bh10SettlementDate;
-//	}
-//	public void setBh11OriginatorStatusCode(char bh11OriginatorStatusCode) {
-//		this.bh11OriginatorStatusCode = bh11OriginatorStatusCode;
-//	}
-//	public void setBh12OriginatingDFIID(String bh12OriginatingDFIID) {
-//		this.bh12OriginatingDFIID = bh12OriginatingDFIID;
-//	}
-//	public void setBh13BatchNum(String bh13BatchNum) {
-//		this.bh13BatchNum = bh13BatchNum;
-//	}
-//	public void setBhLineNumber(int bhLineNumber) {
-//		this.bhLineNumber = bhLineNumber;
-//	}
-//	public void setBhErrors(boolean[] bhErrors) {
-//		this.bhErrors = bhErrors;
-//	}
-//	
-//	
-//	public void setBc1RecordTypeCode(char bc1RecordTypeCode) {
-//		this.bc1RecordTypeCode = bc1RecordTypeCode;
-//	}
-//	public void setBc2ServiceClassCode(String bc2ServiceClassCode) {
-//		this.bc2ServiceClassCode = bc2ServiceClassCode;
-//	}
-//	public void setBc3EntryCount(String bc3EntryCount) {
-//		this.bc3EntryCount = bc3EntryCount;
-//	}
-//	public void setBc4EntryHash(String bc4EntryHash) {
-//		this.bc4EntryHash = bc4EntryHash;
-//	}
-//	public void setBc5TotalDebitEntry(String bc5TotalDebitEntry) {
-//		this.bc5TotalDebitEntry = bc5TotalDebitEntry;
-//	}
-//	public void setBc6TotalCreditEntry(String bc6TotalCreditEntry) {
-//		this.bc6TotalCreditEntry = bc6TotalCreditEntry;
-//	}
-//	public void setBc7CompanyID(String bc7CompanyID) {
-//		this.bc7CompanyID = bc7CompanyID;
-//	}
-//	public void setBc8MessageAuthCode(String bc8MessageAuthCode) {
-//		this.bc8MessageAuthCode = bc8MessageAuthCode;
-//	}
-//	public void setBc9Reserved(String bc9Reserved) {
-//		this.bc9Reserved = bc9Reserved;
-//	}
-//	public void setBc10OriginatingDFIID(String bc10OriginatingDFIID) {
-//		this.bc10OriginatingDFIID = bc10OriginatingDFIID;
-//	}
-//	public void setBc11BatchNumber(String bc11BatchNumber) {
-//		this.bc11BatchNumber = bc11BatchNumber;
-//	}
-//	public void setBcLineNumber(int bcLineNumber) {
-//		this.bcLineNumber = bcLineNumber;
-//	}
-//	public void setBcErrors(boolean[] bcErrors) {
-//		this.bcErrors = bcErrors;
-//	}
-// 
     
 }

@@ -27,15 +27,6 @@ public class AddendaRecord {
     public String getAddendaSequenceNum() { return ar4AddendaSequenceNum; }
     public String getEntryDetailSeqNum() { return ar5EntryDetailSeqNum; }
 
-    /*
-    public void setAddendaTypeCode(String line) { ar2AddendaTypeCode = line; }
-    public void setRecordTypeCode(String line) { ar1RecordTypeCode = line; }
-    public void setPaymentRelatedInfo(String line) { ar3PaymentRelatedInfo = line; }
-    public void setAddendaSequenceNum(String line) { ar4AddendaSequenceNum = line; }
-    public void setEntryDetailSeqNum(String line) { ar5EntryDetailSeqNum = line; }
-    */
-
-
     @Override
     public String toString() {
         return getRecordTypeCode() +
