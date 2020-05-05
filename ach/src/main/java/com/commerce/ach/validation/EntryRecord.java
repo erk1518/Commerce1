@@ -1,4 +1,4 @@
-package com.commerce.ach;
+package com.commerce.ach.validation;
 
 import java.util.Arrays;
 

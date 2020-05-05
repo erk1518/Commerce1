@@ -1,4 +1,4 @@
-package com.commerce.ach;
+package com.commerce.ach.camel;
 // https://camel.apache.org/components/latest/file-watch-component.html
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;

@@ -1,5 +1,6 @@
-package com.commerce.ach;
+package com.commerce.ach.camel;
 
+import com.commerce.ach.validation.ACH4;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import java.io.File;

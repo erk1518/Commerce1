@@ -1,7 +1,9 @@
 package com.commerce.ach;
 
+import com.commerce.ach.camel.FileWatch;
 import com.commerce.ach.storage.StorageProperties;
 import com.commerce.ach.storage.StorageService;
+import com.commerce.ach.validation.ACHRoutes;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.commerce.ach;
+package com.commerce.ach.camel;
 // // http://preparationforinterview.com/preparationforinterview/camel-object-to-json-springdsl
 // https://www.javainuse.com/camel/camel-marshal-unmarshal-example
 // the Camel Processor class where we will be modifying the unmarshalled object.

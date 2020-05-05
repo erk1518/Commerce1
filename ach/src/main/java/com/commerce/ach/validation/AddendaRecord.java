@@ -1,4 +1,4 @@
-package com.commerce.ach;
+package com.commerce.ach.validation;
 
 public class AddendaRecord {
     //ENTRY DETAIL ADDENDA RECORDS - AR

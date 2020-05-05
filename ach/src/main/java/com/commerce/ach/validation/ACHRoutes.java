@@ -1,6 +1,7 @@
-package com.commerce.ach;
+package com.commerce.ach.validation;
 //alternative URI; Camel uses it’s own non-standard file URI format: file:// + <directory path> + ? + fileName= + <filename> + & + <other optional key=value params>
 
+import com.commerce.ach.camel.TEXTtoPOJO;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
